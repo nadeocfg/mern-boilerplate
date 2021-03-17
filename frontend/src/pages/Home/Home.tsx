@@ -1,9 +1,26 @@
-import { connect } from 'react-redux'
-import counterActions from '../../store/actions/counterActions'
-import './Home.scss'
+import { connect } from 'react-redux';
+import axios from 'axios';
+import counterActions from '../../store/actions/counterActions';
+import './Home.scss';
+import { useEffect } from 'react';
 
 function Home({ ...props }: any) {
-  const { counter, increment, decrement, incrementNumber } = props
+  const { counter, increment, decrement, incrementNumber } = props;
+
+  useEffect(() => {
+    getProducts();
+  }, []);
+
+  const getProducts = () => {
+    return axios
+      .get('/api/products')
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log({ ...err });
+      });
+  };
 
   return (
     <>
@@ -14,10 +31,10 @@ function Home({ ...props }: any) {
       <button onClick={() => decrement()}>DEC</button>
       <button onClick={() => incrementNumber(5)}>INC +5</button>
     </>
-  )
+  );
 }
 
 const mapStateToProps = (state: any) => ({
   counter: state.counter.counter,
-})
-export default connect(mapStateToProps, counterActions)(Home)
+});
+export default connect(mapStateToProps, counterActions)(Home);
