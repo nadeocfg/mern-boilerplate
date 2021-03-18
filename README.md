@@ -34,4 +34,4 @@ Start React app with Express server together
 ✔️ Add React  
 ✔️ Add Redux, React-router  
 ✔️ Express  
-❌ MongoDB connection
+✔️ MongoDB connection

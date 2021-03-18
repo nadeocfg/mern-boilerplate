@@ -1,6 +1,12 @@
 import express from 'express';
-import products from './data/sampleProducts.json';
-import { ProductModel } from '../models/productModel';
+import colors from 'colors';
+import dotenv from 'dotenv';
+import connectDB from './config/db';
+import productRoutes from './routes/productRoutes';
+
+dotenv.config();
+const port = process.env.PORT || 5000;
+connectDB();
 
 const app = express();
 
@@ -8,22 +14,12 @@ app.get('/', (request: express.Request, response: express.Response) => {
   response.send('API is running');
 });
 
-app.get(
-  '/api/products',
-  (request: express.Request, response: express.Response) => {
-    response.json(products);
-  }
+app.use('/api/products', productRoutes);
+
+app.listen(port, () =>
+  console.log(
+    colors.cyan.underline(
+      `Server running in ${process.env.NODE_ENV} mode, on port ${port}`
+    )
+  )
 );
-
-app.get(
-  '/api/products/:id',
-  (request: express.Request, response: express.Response) => {
-    const product = products.find(
-      (product: ProductModel) => product.id === request.params.id
-    );
-
-    response.json(product);
-  }
-);
-
-app.listen(5000, () => console.log('Server running on 5000 port'));

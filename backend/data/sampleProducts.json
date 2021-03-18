@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "user": "605398ed7c517d2f8c345b83",
     "name": "Airpods Wireless Bluetooth Headphones",
     "image": "/images/airpods.jpg",
     "description":
@@ -13,7 +13,7 @@
     "numReviews": 12
   },
   {
-    "id": "2",
+    "user": "605398ed7c517d2f8c345b83",
     "name": "iPhone 11 Pro 256GB Memory",
     "image": "/images/phone.jpg",
     "description":
@@ -26,7 +26,7 @@
     "numReviews": 8
   },
   {
-    "id": "3",
+    "user": "605398ed7c517d2f8c345b83",
     "name": "Cannon EOS 80D DSLR Camera",
     "image": "/images/camera.jpg",
     "description":
@@ -39,7 +39,7 @@
     "numReviews": 12
   },
   {
-    "id": "4",
+    "user": "605398ed7c517d2f8c345b83",
     "name": "Sony Playstation 4 Pro White Version",
     "image": "/images/playstation.jpg",
     "description":
@@ -52,7 +52,7 @@
     "numReviews": 12
   },
   {
-    "id": "5",
+    "user": "605398ed7c517d2f8c345b83",
     "name": "Logitech G-Series Gaming Mouse",
     "image": "/images/mouse.jpg",
     "description":
@@ -65,7 +65,7 @@
     "numReviews": 10
   },
   {
-    "id": "6",
+    "user": "605398ed7c517d2f8c345b83",
     "name": "Amazon Echo Dot 3rd Generation",
     "image": "/images/alexa.jpg",
     "description":
